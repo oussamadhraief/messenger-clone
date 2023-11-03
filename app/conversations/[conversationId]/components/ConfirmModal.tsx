@@ -68,7 +68,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
                 </div>
             </div>
             <div
-                className='mt-5 sm:mt-4 sm:flex sm:flex-row-reverse'
+                className='mt-5 sm:mt-4 flex-col flex sm:flex-row-reverse'
             >
                 <Button
                     disabled={isLoading}
