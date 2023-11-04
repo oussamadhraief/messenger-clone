@@ -41,7 +41,15 @@ const Body: React.FC<BodyProps> = ({
             bottomRef?.current?.scrollIntoView()
         }
 
-        const updateMessageHandler = () => {}
+        const updateMessageHandler = (newMessage: FullMessageType) => {
+            setMessages((current) => current.map((currentMessage) => {
+                if(currentMessage.id === newMessage.id){
+                    return newMessage
+                }
+
+                return currentMessage
+            }))
+        }
 
         pusherClient.bind('messages:new', messageHandler)
         pusherClient.bind('message:update', updateMessageHandler)
