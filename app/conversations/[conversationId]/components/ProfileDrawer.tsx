@@ -14,12 +14,10 @@ import useActiveList from "@/app/hooks/useActiveList";
 interface ProfileDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  data: {
-    conversations: Conversation[];
+  data: Conversation[] & {
     users: User[];
   };
 }
-
 
 const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
   isOpen,
