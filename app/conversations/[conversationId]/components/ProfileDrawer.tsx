@@ -14,7 +14,7 @@ import useActiveList from "@/app/hooks/useActiveList";
 interface ProfileDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  data: Conversation[] & {
+  data: Conversation & {
     users: User[];
   };
 }
